@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer info</title>
+    <title>Complete order</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
@@ -14,20 +14,21 @@
     </header>
 
     </div>
-    <div class="form-container">
-        <form method="post">
-            <input type="text" class="first-name" id="input-field" placeholder="First Name"/>
-            <input type="text" class="last-name" id="input-field" placeholder="Last Name"/>
-            <input type="number" class="phone-number" id="input-field" placeholder="Phone Number (numbers only)"/>
-            <input type="text" class="home-adress" id="input-field" placeholder="Adress (street)"/>
-            <input type="number" class="home-number" id="input-field" placeholder="Home/Apartment Number"/>
-            <input type="number" class="zip-code" id="input-field" placeholder="ZIP Code">
-            <input type="text" class="city" id="input-field" placeholder="City"/>
-            <input type="text" class="email-adress" id="input-field"placeholder="Email Address">
-            <textarea type="text" class="note" id="more-info-input-field" placeholder="Enter any additional info that may be of help..."></textarea>
-            <button id="button">Submit</button>
+    <div class="form-container" id="form-container">
+        <form action="#" method="get" id="my-form">
+            <input type="text" class="input-field" id="first-name" placeholder="First Name" minlength="3" maxlength="11" required/>
+            <input type="text" class="input-field" id="last-name" placeholder="Last Name" minlength="3" maxlength="11" required/>
+            <input type="number" class="input-field" id="phone-number" placeholder="Phone Number" maxlength="15" required/>
+            <input type="text" class="input-field" id="home-adress" placeholder="Adress" minlength="5" maxlength="40" required/>
+            <input type="number" class="input-field" id="home-number" placeholder="Home/Apartment No." minlength="1" maxlength="5" required/>
+            <input type="number" class="input-field" id="zip-code" placeholder="ZIP Code" minlength="5" maxlength="5" required>
+            <input type="text" class="input-field" id="city" placeholder="City" minlength="3" maxlength="15" required/>
+            <input type="text" class="input-field" id="email-adress" placeholder="Email Address" required>
+            <textarea type="text" class="more-info-input-field" id="note" placeholder="Enter any additional info that may be of help..."></textarea>
         </form>
     </div>
-    
+    <button type="submit" id="button" onclick="buyerInfoHandler()">Buy the product</button>
+
+    <script src="script.js"></script>
 </body>
 </html>

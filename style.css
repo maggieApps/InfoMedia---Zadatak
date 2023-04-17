@@ -23,8 +23,15 @@ h3 {
   padding-right: 15%;
 }
 
+h1 {
+  font-size: 350%;
+}
+
+h3 {
+  font-size: 250%;
+}
+
 body {
-  background-repeat: no-repeat;
   background-position: center;
   align-items: center;
   display: flex;
@@ -33,26 +40,48 @@ body {
 }
 
 .form-container {
-  width: 300px;
+  width: 60%;
   height: 80%;
   border-radius: 8px;
   margin-top: 40px;
   text-align: center;
+  display: flex;
+  min-width: 250px;
 }
 
-#input-field {
-  width: 250px;
+.input-field {
+  width: 43%;
   height: 35px;
+  min-width: 230px;
   border-radius: 20px;
   margin: 4px;
-  border: 2px solid RGB(214, 35, 35);
+  border: 2px solid RGB(132, 134, 137);
   font-size: medium;
   text-align: center;
+  font-weight: bold;
+  transition: background 0.4s;
 }
 
-#input-field::placeholder, .note::placeholder {
-  color:darkgray
+.input-field:required:valid {
+  border-color: green;
+}
 
+.input-field:required:focus:valid {
+  background: rgba(130, 247, 20, 0.767);
+}
+
+.input-field:focus:invalid {
+  background: rgba(255, 141, 48, 0.774);
+}
+
+.input-field:focus:invalid::placeholder {
+  color: RGB(214, 35, 35);
+}
+
+.input-field::placeholder,
+#note::placeholder {
+  color: rgb(136, 133, 133);
+  font-weight: bold;
 }
 
 input::-webkit-outer-spin-button,
@@ -61,21 +90,24 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.note {
-  width: 95%;
+#note {
+  width: 70%;
   height: 150px;
   border-radius: 20px;
   margin: 4px;
-  border: 2px solid RGB(214, 35, 35);
+  border: 2px solid RGB(132, 134, 137);
   font-size: medium;
   display: flex;
   text-justify: distribute;
   justify-content: center;
   padding: 7px 7px;
   font-size: larger;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 230px;
 }
 
-.note::placeholder {
+#note::placeholder {
   display: flex;
   text-align: center;
 }
@@ -91,4 +123,34 @@ input::-webkit-inner-spin-button {
   background-color: RGB(214, 35, 35);
   color: RGB(228, 228, 228);
   font-weight: bold;
+}
+
+@media only screen and (max-width: 1200px) {
+  h1 {
+    font-size: 300%;
+  }
+
+  h3 {
+    font-size: 240%;
+  }
+}
+
+@media only screen and (max-width: 915px) {
+  h1 {
+    font-size: 250%;
+  }
+
+  h3 {
+    font-size: 190%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 200%;
+  }
+
+  h3 {
+    font-size: 140%;
+  }
 }
