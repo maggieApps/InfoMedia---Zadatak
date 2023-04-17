@@ -191,9 +191,9 @@ const buyerInfoHandler = () => {
     console.log(`ZIP Code: ${buyerInfo.zipCode.value}`);
     console.log(`City: ${buyerInfo.city.value}`);
     console.log(`Email adress: ${buyerInfo.emailAdress.value}`);
-    document.getElementById("my-form").reset();
     if ((a = buyerInfo.aditionlInfo.value)) {
       console.log(`Aditional info: ${a}`);
     }
+    document.getElementById("my-form").reset();
   }
 };
